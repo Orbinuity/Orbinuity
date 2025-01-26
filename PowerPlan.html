@@ -74,12 +74,14 @@
         }
     </style>
     <script>
-        function updateAction() {
+        function downloadFile() {
             const version = document.getElementById('versions').value;
-            // Construct the download URL based on the selected version
-            const downloadUrl = `downloads/PowerPlan/PowerPlan-${version}.jar`;
-            // Set the form action attribute to the constructed URL
-            document.getElementById('downloadForm').action = downloadUrl;
+            const link = document.createElement('a');
+            link.href = `downloads/PowerPlan/PowerPlan-${version}.jar`;
+            link.download = `PowerPlan-${version}.jar`;
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
         }
     </script>
 </head>
@@ -90,9 +92,9 @@
     <main>
         <button onclick="window.location.href = 'projects.html';">Back</button>
         <p>A Minecraft mod</p>
-        <form id="downloadForm" method="GET" action="">
+        <form onsubmit="event.preventDefault(); downloadFile();">
             <label for="versions">Choose a version:</label>
-            <select name="versions" id="versions" onchange="updateAction()">
+            <select name="versions" id="versions">
                 <option value="1.20.4">1.20.4</option>
                 <option value="1.20.3">1.20.3</option>
                 <option value="1.20.2">1.20.2</option>
