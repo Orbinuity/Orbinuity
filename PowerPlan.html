@@ -76,7 +76,7 @@
     <script>
         function updateAction() {
             const version = document.getElementById('versions').value;
-            window.location.href = `Orbinuity/downloads/PowerPlan/PowerPlan-${version}.jar`;
+            document.getElementById('downloadForm').action = `downloads/PowerPlan/PowerPlan-${version}.jar`;
         }
     </script>
 </head>
@@ -91,6 +91,10 @@
             <label for="versions">Choose a version:</label>
             <select name="versions" id="versions" onchange="updateAction()">
                 <option value="1.20.4">1.20.4</option>
+                <option value="1.20.3">1.20.3</option>
+                <option value="1.20.2">1.20.2</option>
+                <option value="1.20.1">1.20.1</option>
+                <option value="1.20">1.20</option>
             </select>
             <input type="submit" value="Download">
         </form>
