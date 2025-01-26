@@ -1,0 +1,13 @@
+{
+    "homepage": "https://orbinuity.github.io/Orbinuity/PowerPlan.html",
+    "1.0.0": {
+        "version": "1.0.0",
+        "download": "https://orbinuity.github.io/Orbinuity/assets/PowerPlan/1.0.0/PowerPlan-1.20.4.jar",
+        "changelog": "https://orbinuity.github.io/Orbinuity/assets/PowerPlan/1.0.0/changelog.md",
+        "description": "Initial release of Power Plan!"
+    },
+    "promos": {
+      "1.20.4-latest": "1.0.0",
+      "1.20.4-recommended": "1.0.0"
+    }
+  }
