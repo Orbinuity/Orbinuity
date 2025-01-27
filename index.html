@@ -8,6 +8,9 @@
     <style>
         body {
             font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
         }
         menu {
             background-color: #333;
@@ -31,18 +34,77 @@
         menu ul li a:hover {
             background-color: #111;
         }
+        header {
+            background-color: #333;
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+        }
+        header h1 {
+            margin: 0;
+        }
+        main {
+            padding: 20px;
+        }
+        .download {
+            background-color: white;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .download label, form button {
+            display: block;
+            width: 100%;
+            margin-bottom: 10px;
+        }
+        footer {
+            position: fixed;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+        }
+        footer a {
+            color: #ffcc00;
+            text-decoration: none;
+        }
+        footer a:hover {
+            text-decoration: underline;
+        }
+        button {
+            background-color: #333;
+            color: white;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #555;
+        }
     </style>
 </head>
-<menu>
-    <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="contact.html">Contact</a></li>
-        <li><a href="projects.html">Projects</a></li>
-    </ul>
-</menu>
 <body>
-    <h1>Home</h1>
-    <p>Welcome to Orbinuity!</p>
+    <header>
+        <menu>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="projects.html">Projects</a></li>
+            </ul>
+        </menu>
+    </header>
+    <main>
+        <h1>Home</h1>
+        <p class="download">
+            <p>Welcome to Orbinuity!</p>
+        </p>
+    </main>
+    <footer>
+        <p>This website is made by <a href="https://github.com/Orbinuity">Orbinuity</a> for <a href="https://github.com/Orbinuity">Orbinuity</a> | Email: <a href="mailto:orbinuity@ratgers.nl">Orbinuity@ratgers.nl</a></p>
+    </footer>
 </body>
 </html>
