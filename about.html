@@ -3,11 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About - Orbinuity</title>
+    <title>Home - Orbinuity</title>
     <link rel="icon" href="assets/logo.png" type="image/png">
     <style>
         body {
             font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
         }
         menu {
             background-color: #333;
@@ -31,25 +34,85 @@
         menu ul li a:hover {
             background-color: #111;
         }
+        header {
+            background-color: #333;
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+        }
+        header h1 {
+            margin: 0;
+        }
+        main {
+            padding: 20px;
+        }
+        .download {
+            background-color: white;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .download label, form button {
+            display: block;
+            width: 100%;
+            margin-bottom: 10px;
+        }
+        footer {
+            position: fixed;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+        }
+        footer a {
+            color: #ffcc00;
+            text-decoration: none;
+        }
+        footer a:hover {
+            text-decoration: underline;
+        }
+        button {
+            background-color: #333;
+            color: white;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #555;
+        }
     </style>
 </head>
-<menu>
-    <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="contact.html">Contact</a></li>
-        <li><a href="projects.html">Projects</a></li>
-    </ul>
-</menu>
 <body>
-    <h1>About</h1>
-    <p>Orbinuity is a company that specializes in software and hardware.</p>
-    <p>Our mission is to provide the best solutions for our customers.</p>
-    <p>Our vision is to be the best tech company.</p>
-    <p>Our values are quality, innovation, and customer satisfaction.</p>
-    <p>Our customers are the most important part of our business.</p>
-    <h2>Our Team</h2>
-    <p>Head: <a href="https://github.com/Flurop">Flurop</a></p>
-    <p>Member: <a href="https://github.com/FloxKcah">FloxKcah</a></p>
+    <header>
+        <menu>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="projects.html">Projects</a></li>
+            </ul>
+        </menu>
+    </header>
+    <main>
+        <h1>About</h1>
+        <p class="download">
+                <p>Orbinuity is a company that specializes in software and hardware.</p>
+                <p>Our mission is to provide the best solutions for our customers.</p>
+                <p>Our vision is to be the best tech company.</p>
+                <p>Our values are quality, innovation, and customer satisfaction.</p>
+                <p>Our customers are the most important part of our business.</p>
+                <br></br>
+                <h2>Our Team</h2>
+                <p>Head: <a href="https://github.com/Flurop">Flurop</a></p>
+                <p>Member: <a href="https://github.com/FloxKcah">FloxKcah</a></p>
+        </p>
+    </main>
+    <footer>
+        <p>This website is made by <a href="https://github.com/Orbinuity">Orbinuity</a> for <a href="https://github.com/Orbinuity">Orbinuity</a> | Email: <a href="mailto:orbinuity@ratgers.nl">Orbinuity@ratgers.nl</a></p>
+    </footer>
 </body>
 </html>
