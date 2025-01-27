@@ -7,3 +7,4 @@ Before copying any part of this project, please read the [LICENSE](./LICENSE) fi
 ## Members
 
 Head: [Flurop](https://github.com/Flurop)
+Member: [FloxKcah](https://github.com/FloxKcah)
