@@ -83,7 +83,7 @@
         Download 0.0.0
       </button>
       <h3>Other versions:</h3>
-      <button onclick="window.location.href = 'https://orbinuity.github.io/BetterCropy/versions/1.20.4/0.0.0-BetterCropy.jar';">
+      <button onclick="alert(latest);">
         Download 0.0.0
       </button>
     </div>
@@ -100,7 +100,6 @@
                     }
                     const data = await response.json();
                     const latest = data.Promos["1.20.4-latest"];
-                    alert(latest);
                     document.getElementById('Latest').textContent = `number: ${latest}`;
                     document.getElementById('Latest').onclick = `window.location.href = "https://orbinuity.github.io/BetterCropy/versions/1.20.4/${latest}-BetterCropy.jar";`;
                     const recommended = data.Promos["1.20.4-recommended"];
