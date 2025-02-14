@@ -110,6 +110,7 @@
                     document.getElementById('Recommended').textContent = `number: ${recommended}`;
                     document.getElementById('Recommended').onclick = `window.location.href = "https://orbinuity.github.io/BetterCropy/versions/1.20.4/${recommended}-BetterCropy.jar";`;
                 } catch (error) {
+                    alert("Error fetching JSON");
                     console.error('Error fetching JSON:', error);
                 }
             }
