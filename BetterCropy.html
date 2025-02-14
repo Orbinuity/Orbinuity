@@ -83,7 +83,7 @@
         Download 0.0.0
       </button>
       <h3>Other versions:</h3>
-      <button onclick="alert(latest);">
+      <button onclick="customAction();">
         Download 0.0.0
       </button>
     </div>
@@ -92,6 +92,10 @@
     <div class="download">
         <div id="content"></div>
         <script>
+            function customAction() {
+                alert(latest);
+                alert("New action triggered!");
+            }
             async function updateButtonLabel() {
                 try {
                     const response = await fetch('https://orbinuity.github.io/BetterCropy/versions/1.20.4/update.json');
