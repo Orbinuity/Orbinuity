@@ -75,11 +75,11 @@
     <div class="download">
       <h2>1.20.4</h2>
       <h3>Recommended:</h3>
-      <button onclick="window.location.href = 'https://orbinuity.github.io/BetterCropy/versions/1.20.4/1.0.0-BetterCropy.jar';">
+      <button id="Recommended" onclick="window.location.href = 'https://orbinuity.github.io/BetterCropy/versions/1.20.4/1.0.0-BetterCropy.jar';">
         Download 1.0.0
       </button>
       <h3>Latest:</h3>
-      <button onclick="window.location.href = 'https://orbinuity.github.io/BetterCropy/versions/1.20.4/1.0.0-BetterCropy.jar';">
+      <button id="Latest" onclick="window.location.href = 'https://orbinuity.github.io/BetterCropy/versions/1.20.4/1.0.0-BetterCropy.jar';">
         Download 1.0.0
       </button>
       <h3>Other versions:</h3>
@@ -92,6 +92,24 @@
     <div class="download">
         <div id="content"></div>
         <script>
+            async function updateButtonLabel() {
+                try {
+                    const response = await fetch('https://example.com/path/to/your.json');
+                    if (!response.ok) {
+                        throw new Error(`HTTP error! Status: ${response.status}`);
+                    }
+                    const data = await response.json();
+                    const latest = data.Promos["1.20.4-latest"];
+                    document.getElementById('Latest').textContent = `number: ${latest}`;
+                    document.getElementById('Latest').onclick = `window.location.href = "https://orbinuity.github.io/BetterCropy/versions/1.20.4/${latest}-BetterCropy.jar";`;
+                    const recommended = data.Promos["1.20.4-recommended"];
+                    document.getElementById('Recommended').textContent = `number: ${recommended}`;
+                    document.getElementById('Recommended').onclick = `window.location.href = "https://orbinuity.github.io/BetterCropy/versions/1.20.4/${recommended}-BetterCropy.jar";`;
+                } catch (error) {
+                    console.error('Error fetching JSON:', error);
+                }
+            }
+
             async function loadMarkdown() {
                 try {
                     const response = await fetch('https://orbinuity.github.io/BetterCropy/versions/1.20.4/1.0.0-changelog.md');
@@ -103,6 +121,7 @@
                 }
             }
             window.onload = loadMarkdown;
+            window.onload = updateButtonLabel;
         </script>
     </div>
   </main>
