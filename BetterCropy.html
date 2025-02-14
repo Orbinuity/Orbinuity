@@ -93,7 +93,7 @@
         <div id="content"></div>
         <script>
             function customAction() {
-                alert(response);
+                
             }
             async function updateButtonLabel() {
                 try {
@@ -102,6 +102,7 @@
                         alert("Error fetching JSON");
                         throw new Error(`HTTP error! Status: ${response.status}`);
                     }
+                    alert(response);
                     const data = await response.json();
                     const latest = data.Promos["1.20.4-latest"];
                     document.getElementById('Latest').textContent = `number: ${latest}`;
@@ -127,8 +128,6 @@
             }
             window.onload = loadMarkdown;
             window.onload = updateButtonLabel;
-            window.onload = alert("23242");
-            window.onload = alert("This alert should display in Chrome.");
         </script>
     </div>
   </main>
