@@ -101,19 +101,19 @@
         <br></br>
         <h1 style="text-align: center;">---------- All changelogs ----------</h1>
         <div class="download">
-            <div id="content" style="text-align: center; font-size: 1.5em;"></div>
+            <div id="changelog-content" style="text-align: center; font-size: 1.5em;"></div>
             <script>
-                async function loadMarkdown() {
+                async function loadAllChangelogs() {
                     try {
                         const response = await fetch('https://orbinuity.github.io/BetterCropy/changelogs/1.0.0-changelog.md');
                         const markdown = await response.text();
                         const htmlContent = marked.parse(markdown);
-                        document.getElementById('content').innerHTML = htmlContent;
+                        document.getElementById('changelog-content').innerHTML = htmlContent;
                     } catch (error) {
                         console.error('Error loading Markdown file:', error);
                     }
                 }
-                window.onload = loadMarkdown;
+                window.onload = loadAllChangelogs;
             </script>
         </div>
     </main>
