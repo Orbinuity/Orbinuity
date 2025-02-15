@@ -72,7 +72,7 @@
         <button onclick="window.location.href = 'projects.html';">Back</button>
         <p>A simple mod that makes farming more fun.</p>
         <div style="text-align: center;" class="download">
-            <div id="1.0.0-Changelog" style="font-size: 1.5em;"></div>
+            <div id="latestChangelog" style="font-size: 1.5em;"></div>
         </div>
         <h1 style="text-align: center;">Downloads</h1>
         <div class="download">
@@ -94,6 +94,7 @@
                         const markdown = await response.text();
                         const htmlContent = marked.parse(markdown);
                         document.getElementById('1.0.0-Changelog').innerHTML = htmlContent;
+                        document.getElementById('latestChangelog').innerHTML = htmlContent;
                     } catch (error) {
                         console.error('Error loading all changelogs:', error);
                     }
