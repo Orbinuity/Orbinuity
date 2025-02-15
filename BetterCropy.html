@@ -72,19 +72,7 @@
         <button onclick="window.location.href = 'projects.html';">Back</button>
         <p>A simple mod that makes farming more fun.</p>
         <div style="text-align: center;" class="download">
-            <div id="latestChangelog" style="font-size: 1.5em;"></div>
-            <script>
-                async function loadCurrentChangelog() {
-                    try {
-                        const response = await fetch('https://orbinuity.github.io/BetterCropy/changelogs/1.0.0-changelog.md');
-                        const markdown = await response.text();
-                        const htmlContent = marked.parse(markdown);
-                        document.getElementById('currentChangelog').innerHTML = htmlContent;
-                    } catch (error) {
-                        console.error('Error loading current changelog:', error);
-                    }
-                }
-            </script>
+            <div id="1.0.0-Changelog" style="font-size: 1.5em;"></div>
         </div>
         <h1 style="text-align: center;">Downloads</h1>
         <div class="download">
@@ -105,7 +93,7 @@
                         const response = await fetch('https://orbinuity.github.io/BetterCropy/changelogs/1.0.0-changelog.md');
                         const markdown = await response.text();
                         const htmlContent = marked.parse(markdown);
-                        document.getElementById('allChangelogs').innerHTML = htmlContent;
+                        document.getElementById('1.0.0-Changelog').innerHTML = htmlContent;
                     } catch (error) {
                         console.error('Error loading all changelogs:', error);
                     }
@@ -113,7 +101,6 @@
 
                 // Initialize both markdown loaders
                 window.addEventListener('load', () => {
-                    loadCurrentChangelog();
                     loadAllChangelogs();
                 });
             </script>
